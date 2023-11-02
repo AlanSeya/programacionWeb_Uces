@@ -6,8 +6,13 @@ $personas = $_POST['personas'];
 $calendario = $_POST['calendario'];
 $horario = $_POST['horario'];
 
-$para = "@localhost";
-$asunto = "ejemplo";
+$datos = "Nombre: $nombre | Email:  $email | Fecha: $calendario | Hora: $horario \n";
+$file = 'reserva.txt';
+
+file_put_contents($file, $datos, FILE_APPEND);
+
+$para = "elBodegon@localhost";
+$asunto = "Reserva en Bodegon";
 $mensaje = "Hola, se ha realizado una reserva. Detalles:\n\n";
 $mensaje .= "Nombre: " . $nombre . "\n";
 $mensaje .= "Email: " . $email . "\n";
@@ -16,7 +21,6 @@ $mensaje .= "Fecha: " . $calendario . "\n";
 $mensaje .= "Horario: " . $horario . "\n";
 
 $headers = "From: " . $email . "\r\n";
-$headers .= "Reply-To: " . $email . "\r\n";
 
 mail($para, $asunto, $mensaje, $headers);
 
