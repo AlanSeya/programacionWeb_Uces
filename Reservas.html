@@ -1,97 +1,98 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reservas</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <div class="navbar">
-        <div class="contLogo">
-           <a href="index.html">
-   <img class="logo"  src="img/del plata logo.png" alt="logo">
-           </a>
-   </div>
-     
-       <ul>
-           <li><a href="index.html">Home</a></li>
-           <li><a href="Carta.html">Carta</a></li>
-           <li><a href="Sucursales.html">Sucursales</a></li>
-           <li><a href="Reservas.html">Reservas</a></li>
-           <li><a href="Promociones.html">Promociones</a></li>                  
-       </ul>
+      <div class="contLogo">
+        <a href="index.html">
+          <img class="logo" src="img/del plata logo.png" alt="logo" />
+        </a>
       </div>
-  
-<br>
-    <h3>Formulario de reserva</h3>
-    <form method="post" action="envioFormulario.php">
-        <label for="nombre">Nombre: </label><br>
-        <input type="text" id="nombre" name="nombre"><br><br>
 
-        <label for="email">Email: </label><br>
-        <input type="text" id="email" name="email"><br><br>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Carta.html">Carta</a></li>
+        <li><a href="Sucursales.html">Sucursales</a></li>
+        <li><a href="Reservas.html">Reservas</a></li>
+        <li><a href="Promociones.html">Promociones</a></li>
+      </ul>
+    </div>
+
+    <br />
+    <div class="conteiner">
+      <h3>Formulario de reserva</h3>
+      <form method="post" action="envioFormulario.php">
+        <label for="nombre">Nombre: </label><br />
+        <input type="text" id="nombre" name="nombre" /><br /><br />
+
+        <label for="email">Email: </label><br />
+        <input type="text" id="email" name="email" /><br /><br />
 
         <h4>Cantidad de personas</h4>
         <label for="personas"> Seleccione una cantidad </label>
         <select name="personas" id="personas">
-            <option value="1"> 1 </option>
-            <option value="2"> 2 </option>
-            <option value="3"> 3 </option>
-            <option value="4"> 4 </option>
-            <option value="5"> 5 </option>
-            <option value="6"> 6 </option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
         </select>
 
-        <br><br>
+        <br /><br />
         <h4>Fecha de la reserva</h4>
-        <label for = "calendario"> Seleccione una fecha </label>
-        <input type = "date" id="calendario" name="calendario"
-        value="2023-10-10" min="2023-10-10" max="2023-12-31">
+        <label for="calendario"> Seleccione una fecha </label>
+        <input
+          type="date"
+          id="calendario"
+          name="calendario"
+          value="2023-10-10"
+          min="2023-10-10"
+          max="2023-12-31" />
         <!-- value es la fecha que aparece en la opción, sino es aaaa mm dd por default
         min fecha mínima que se selecciona, max es el máximo-->
 
-        <br><br>
+        <br /><br />
         <h4>Horario de la reserva</h4>
         <label for="horario"> Seleccione un horario </label>
         <select name="horario" id="horario">
-            <optgroup label = "Comida"> <!--opciones divididas en subgrupos-->
-                <option value = "12:00">12:00</option>
-                <option value = "12:30">12:30</option>
-                <option value = "13:00">13:00</option>
-                <option value = "13:30">13:30</option>
-                <option value = "14:00">14:00</option>
-            </optgroup>
+          <optgroup label="Comida">
+            <!--opciones divididas en subgrupos-->
+            <option value="12:00">12:00</option>
+            <option value="12:30">12:30</option>
+            <option value="13:00">13:00</option>
+            <option value="13:30">13:30</option>
+            <option value="14:00">14:00</option>
+          </optgroup>
 
-            <optgroup label = "Cena">
-                <option value = "20:00">20:00</option>
-                <option value = "20:30">20:30</option>
-                <option value = "21:00">21:00</option>
-                <option value = "21:30">21:30</option>
-                <option value = "22:00">22:00</option>
-            </optgroup>
+          <optgroup label="Cena">
+            <option value="20:00">20:00</option>
+            <option value="20:30">20:30</option>
+            <option value="21:00">21:00</option>
+            <option value="21:30">21:30</option>
+            <option value="22:00">22:00</option>
+          </optgroup>
         </select>
-        
-        <br><br><br>
-        <input type="submit" value="Enviar">
-    </form>
-</body>
 
-<footer class="footer">
-              
-    <ul>
-        <li><b>Contactos:</b>   </li>
-        <li><b>Dirección: </b>
-        <a href="Sucursales.html">Sucursales</a>
-    </li>
-    <li><b>Teléfono: </b>+54-1122 3344 55
-    </li>
-    <li><b>Email: </b>inabodegon@gmail.com
-    </li>
-       </ul>
-       <a class="derechos"> © 2023 Del Plata Bodegón </a>
-</footer>
-
+        <br /><br /><br />
+        <input type="submit" value="Enviar" />
+      </form>
+    </div>
+    <footer class="footer">
+      <div style="display: flex; justify-content: space-around; min-width: 50%">
+        <p>
+          <a href="Sucursales.html"><b>Sucursales</b></a>
+        </p>
+        <p><b>Teléfono: </b>+54-1122 3344 55</p>
+        <p><b>Email: </b>inabodegon@gmail.com</p>
+      </div>
+      <p><a class="derechos"> © 2023 Del Plata Bodegón </a></p>
+    </footer>
+  </body>
 </html>

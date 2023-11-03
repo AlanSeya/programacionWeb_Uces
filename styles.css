@@ -1,12 +1,33 @@
+body{
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .contLogo{
     text-align: center;
     background-color: rgb(0, 0, 0);
 }
-
+.conteinerSurcusal{
+    display: flex; 
+    justify-content: space-evenly;
+    padding-inline: 20px ;
+}
+.conteiner{
+    padding-inline: 20px ;
+}
 .navbar {
     background-color: rgb(0, 0, 0);
     color: white;
-    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+}
+.logo{
+    max-width: 150px ;
+    max-height: 150px ;
 }
 
 .navbar ul {
@@ -35,14 +56,19 @@
 .footer {
     background-color: rgb(0, 0, 0);
     color: white;
-    justify-content: center;
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;
+    text-decoration: none;
+    color: white;
+    text-align: center;
 }
 
 .footer ul {
     list-style: none;
     padding: 0;
-    display: flex; /* Muestra los elementos en línea horizontalmente */
-    justify-content: center;
+   /* display: flex; /* Muestra los elementos en línea horizontalmente */
+   /* justify-content: center;*/
 }
 .footer li {
     padding: 10px;
